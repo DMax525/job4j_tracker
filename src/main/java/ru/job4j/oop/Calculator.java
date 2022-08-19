@@ -31,16 +31,14 @@ public class Calculator {
         int minus = minus(10);
         System.out.println("Minus: " + minus);
 
-        Calculator multiply = new Calculator();
-        int mult = multiply.multiply(10);
+        Calculator calculator = new Calculator();
+        int mult = calculator.multiply(10);
         System.out.println("Multiply: " + mult);
 
-        Calculator divide = new Calculator();
-        int div = divide.divide(10);
+        int div = calculator.divide(10);
         System.out.println("Divide: " + div);
 
-        Calculator rslsm = new Calculator();
-        int sumAll = rslsm.sumAllOperation(10);
+        int sumAll = calculator.sumAllOperation(10);
         System.out.println("SumAll: " + sumAll);
     }
 }
