@@ -18,7 +18,7 @@ public class Library {
         array[0] = cleanCode;
         array[3] = book1;
         for (Book bk : array) {
-            if (bk.getTitle().equals("Clean Code")) {
+            if ("Clean Code".equals(bk.getTitle())) {
                 System.out.println(bk.getTitle() + ", " + bk.getPages());
             }
         }
