@@ -7,3 +7,4 @@ public interface Transport {
 
     int refill(int amount);
 }
+
