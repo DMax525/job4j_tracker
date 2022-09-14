@@ -8,15 +8,16 @@ public class UserStore {
             if (usr.getUsername().equals(login)) {
                 temp = usr;
                 break;
-            } else {
-                throw new UserNotFoundException("User not found");
             }
+        }
+        if (temp == null) {
+                throw new UserNotFoundException("User not found");
         }
         return temp;
     }
 
     public static boolean validate(User user) throws UserInvalidException {
-        if (!user.isValid() && user.getUsername().length() < 3) {
+        if (!user.isValid() || user.getUsername().length() < 3) {
             throw new UserInvalidException("Invalid user");
         }
         return true;
