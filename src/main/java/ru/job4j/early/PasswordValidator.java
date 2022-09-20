@@ -27,6 +27,7 @@ public class PasswordValidator {
         for (int i : array) {
             if (isDigit(i)) {
                 rsl++;
+                break;
             }
         }
         if (rsl == 0) {
@@ -38,6 +39,7 @@ public class PasswordValidator {
         for (int i : array) {
             if (!isLetterOrDigit(i)) {
                 rsl++;
+                break;
             }
         }
         if (rsl == 0) {
