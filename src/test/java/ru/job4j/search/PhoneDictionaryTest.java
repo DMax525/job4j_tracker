@@ -2,7 +2,6 @@ package ru.job4j.search;
 
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
-import static org.apache.commons.lang3.Validate.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class PhoneDictionaryTest {
@@ -23,6 +22,6 @@ public class PhoneDictionaryTest {
                 new Person("Petr", "Arsentev", "534872", "Bryansk")
         );
         ArrayList<Person> persons = phones.find("Peter");
-        isTrue(persons.isEmpty());
+        assertThat(persons.isEmpty()).isTrue();
     }
 }
