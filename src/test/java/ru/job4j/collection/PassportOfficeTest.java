@@ -14,11 +14,11 @@ public class PassportOfficeTest {
 
     @Test
     public void whenTwoSame() {
-        Citizen PeterArsentev = new Citizen("2f44a", "Petr Arsentev");
-        Citizen VasilyKoshkin = new Citizen("2f44a", "Vasily Koshkin");
+        Citizen peterArsentev = new Citizen("2f44a", "Petr Arsentev");
+        Citizen vasilyKoshkin = new Citizen("2f44a", "Vasily Koshkin");
         PassportOffice office = new PassportOffice();
-        office.add(PeterArsentev);
-        office.add(VasilyKoshkin);
-        assertThat(office.add(VasilyKoshkin)).isFalse();
+        office.add(peterArsentev);
+        office.add(vasilyKoshkin);
+        assertThat(office.add(vasilyKoshkin)).isFalse();
     }
 }
