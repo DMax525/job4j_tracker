@@ -32,12 +32,7 @@ public class AnalyzeByMap {
         Map<String, Integer> temp = new LinkedHashMap<>();
         for (Pupil index : pupils) {
             for (Subject subj : index.subjects()) {
-                if (temp.containsKey(subj.name())) {
-                    int rsl = temp.get(subj.name()) + subj.score();
-                    temp.put(subj.name(), rsl);
-                } else {
-                    temp.put(subj.name(), subj.score());
-                }
+                    temp.put(subj.name(), temp.getOrDefault(subj.name(), 0) + subj.score());
             }
         }
         for (String tmp : temp.keySet()) {
